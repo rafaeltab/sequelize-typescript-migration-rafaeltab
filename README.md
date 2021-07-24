@@ -1,5 +1,7 @@
 # sequelize-typescript-migration
 
+**This fork fixed an issue that I was having with an error in getDiffActionsFromTables.ts**
+
 It is based on [sequelize-typescript](https://www.npmjs.com/package/sequelize-typescript), not supports "sequelize" based model codes.
 and you need prior knowledge of migration of Sequelize.
 

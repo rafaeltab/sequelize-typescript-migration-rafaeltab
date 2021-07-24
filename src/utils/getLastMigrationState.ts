@@ -16,7 +16,9 @@ export default async function getLastMigrationState(sequelize: Sequelize) {
         { type: "SELECT" }
     );
 
-    const parsedLastMigration = JSON.parse(lastMigration);
+    const parsedLastMigration = lastMigration
+        ? JSON.parse(lastMigration["state"])
+        : undefined;
 
-    return parsedLastMigration ? parsedLastMigration["state"] : undefined;
+    return parsedLastMigration;
 }

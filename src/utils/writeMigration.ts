@@ -47,6 +47,7 @@ module.exports = {
     pos: 0,
     up: function(queryInterface, Sequelize)
     {
+        queryInterface = queryInterface.context;
         var index = this.pos;
         return new Promise(function(resolve, reject) {
             function next() {
@@ -65,6 +66,7 @@ module.exports = {
     },
     down: function(queryInterface, Sequelize)
     {
+        queryInterface = queryInterface.context;
         var index = this.pos;
         return new Promise(function(resolve, reject) {
             function next() {
